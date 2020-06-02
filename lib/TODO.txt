@@ -1,0 +1,58 @@
+-----------------------------------------------------------
+| TASKS
+-----------------------------------------------------------
+RESOLVED - Rename app from sms_download to SMS Download
+RESOLVED - Add AdMob interstitial ad
+RESOLVED - Add AdMob Banner ad
+IN PROGRESS - Review & Finalize Icon
+IN PROGRESS - Try adding Search Icon
+IN PROGRESS - OVERFLOW After export to TXT on EXPORT SCREEN
+OPEN - Update AdMob Banner AdIDs
+OPEN - Android Deployment  (https://flutter.dev/docs/deployment/android)
+OPEN - iOS Deployment
+
+-----------------------------------------------------------
+| AD MOB INSTRUCTIONS
+-----------------------------------------------------------
+AdMob:  SMS Download (Android)
+App ID: ca-app-pub-0237315417494436~7376498117
+
+Follow these instructions:
+Complete the instructions in the Google Mobile Ads SDK guide using this app ID:
+ca-app-pub-0237315417494436~7376498117
+
+Follow the INTERSTITIAL implementation guide to integrate the SDK. You'll specify ad type and placement when you integrate the code using this ad unit ID:
+InterstitialAdOnExport:
+ca-app-pub-0237315417494436/5606259059
+
+Follow the BANNER implementation guide to integrate the SDK. You'll specify ad type, size, and placement when you integrate the code using this ad unit ID:
+BannerAdForPages:
+ca-app-pub-0237315417494436/3125513483
+
+Review the AdMob policies to ensure your implementation complies.
+
+1) .../android/build.gradle
+allprojects {
+    repositories {
+        google()
+
+2) ../android/app/build.gradle
+NOTE: THIS CAUSED PROBLEMS AND WAS COMMENTED OUT
+dependencies {
+    implementation 'com.google.android.gms:play-services-ads:18.3.0'
+
+3) ../android/app/main/AndroidManifest.xml
+<manifest>
+    <application>
+        <!-- Sample AdMob App ID: ca-app-pub-3940256099942544~3347511713 -->
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-xxxxxxxxxxxxxxxx~yyyyyyyyyy"/>
+    </application>
+</manifest>
+
+4) ../ios/Runner/Info.plist
+<key>GADApplicationIdentifier</key>
+<string>[ADMOB_APP_ID]</string>
+
+Reference: https://medium.com/@akshatapp/how-to-integrate-admob-ads-in-your-flutter-app-using-firebase-admob-package-7de2663286d3

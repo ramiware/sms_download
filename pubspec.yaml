@@ -1,0 +1,130 @@
+name: sms_download
+description: SMS Thread Downloader.
+
+# The following defines the version and build number for your application.
+# A version number is three numbers separated by dots, like 1.2.43
+# followed by an optional build number separated by a +.
+# Both the version and the builder number may be overridden in flutter
+# build by specifying --build-name and --build-number, respectively.
+# In Android, build-name is used as versionName while build-number used as versionCode.
+# Read more about Android versioning at https://developer.android.com/studio/publish/versioning
+# In iOS, build-name is used as CFBundleShortVersionString while build-number used as CFBundleVersion.
+# Read more about iOS versioning at
+# https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.2.2 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # AdMob Support
+  firebase_admob: ^0.9.1
+
+  # Creates message bubbles
+  bubble: ^1.1.9+1
+
+  # Provides user friendly date formats
+  date_format: 1.0.6
+
+  # Opens a file using the native app
+  open_file: 2.0.3
+
+  # Used to retreive a file's size in a readable format
+  filesize: 1.0.4
+
+  ##
+  # Open file or folder
+  file_picker: 1.4.2
+  
+  # Folder picker
+  folder_picker: 0.3.0
+  flutter_file_manager: 0.2.0
+  ##
+  # Provides sms object functionality like reading
+  sms_maintained: ^0.2.5
+
+  # A plug-in for finding commonly used locations on the file system.
+  # Supports iOS and Android.
+  path_provider: ^1.3.0
+
+  # Share files
+  esys_flutter_share: 1.0.2
+  share_extend: ^1.0.9
+
+  # File Write Permission
+  simple_permissions: ^0.1.9
+
+  # PDF plug-in that lets you create PDF files
+  pdf: 1.3.22
+  
+  # PDF plugin-in for generating a pdf from html
+  flutter_html_to_pdf: 0.5.2
+
+  # Returns the mime type of a file
+  mime: ^0.9.6+3
+
+  # The following adds the Cupertino Icons font to your application.
+  # Use with the CupertinoIcons class for iOS style icons.
+  cupertino_icons: ^0.1.2
+
+  flutter_launcher_icons: 0.7.4
+
+flutter_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/icon/icon-template-x-large.png"
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+
+# For information on the generic Dart part of this file, see the
+# following page: https://dart.dev/tools/pub/pubspec
+
+# The following section is specific to Flutter.
+flutter:
+
+  # The following line ensures that the Material Icons font is
+  # included with your application, so that you can use the icons in
+  # the material Icons class.
+  uses-material-design: true
+
+    # fonts:
+    # - family: OpenSans
+    #   fonts:
+    #     - asset: assets/fonts/OpenSans-Regular.ttf
+
+  # To add assets to your application, add an assets section, like this:
+  assets:
+   - assets/images/icon-template-x-large-transparentBG.png
+  #  - images/a_dot_ham.jpeg
+
+  # An image asset can refer to one or more resolution-specific "variants", see
+  # https://flutter.dev/assets-and-images/#resolution-aware.
+
+  # For details regarding adding assets from package dependencies, see
+  # https://flutter.dev/assets-and-images/#from-packages
+
+  # To add custom fonts to your application, add a fonts section here,
+  # in this "flutter" section. Each entry in this list should have a
+  # "family" key with the font family name, and a "fonts" key with a
+  # list giving the asset and other descriptors for the font. For
+  # example:
+  # fonts:
+  #   - family: Schyler
+  #     fonts:
+  #       - asset: fonts/Schyler-Regular.ttf
+  #       - asset: fonts/Schyler-Italic.ttf
+  #         style: italic
+  #   - family: Trajan Pro
+  #     fonts:
+  #       - asset: fonts/TrajanPro.ttf
+  #       - asset: fonts/TrajanPro_Bold.ttf
+  #         weight: 700
+  #
+  # For details regarding fonts from package dependencies,
+  # see https://flutter.dev/custom-fonts/#from-packages
