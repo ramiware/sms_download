@@ -3,7 +3,7 @@ import 'dart:io';
 import 'package:esys_flutter_share/esys_flutter_share.dart';
 import 'package:mime/mime.dart';
 
-class ShareLib {
+class ShareLib {  
   /// Shares text
   Future<bool> shareMessagesAsText(String messageData) async {
     // debugPrint("Attempting to share as text");
@@ -21,8 +21,9 @@ class ShareLib {
   Future<void> shareMessagesAsFile(File fileToShare) async {
     List<int> bytesList = fileToShare.readAsBytesSync().toList();
     String mimeType = lookupMimeType(fileToShare.path);
-
+  
     await Share.file(
         "file title!", fileToShare.path.split('/').last, bytesList, mimeType);
   }
 }
+  

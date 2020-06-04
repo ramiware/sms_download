@@ -7,7 +7,8 @@ void main() {
 
   SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp])
       .then((_) {
-    runApp(new ThreadListUI());
+        debugPrint("Hello World!");
+    // runApp(new ThreadListUI());
   });
 }
   
